@@ -2,7 +2,7 @@
 
 Pipeline de datos que toma el dataset público de Meetup (Kaggle), lo organiza en Snowflake, calcula métricas sobre eventos y miembros, avisa por Slack y guarda los resultados en S3. Todo corre solo, cada 15 minutos, orquestado con Apache Airflow.
 
-## Qué hace, en pocas palabras
+## Qué hace
 
 1. **Trae los datos**: el archivo grande de miembros (casi 6 millones de filas) se carga en pedazos, uno por corrida, para no saturar nada.
 2. **Los ordena**: limpia y organiza ciudades, grupos, categorías y eventos en tablas listas para analizar.
