@@ -77,15 +77,3 @@ astro dev start                  # levanta Airflow en http://localhost:8080
 2. Configurar en Airflow las conexiones `snowflake_default` y `slack_webhook`.
 3. Activar los dos DAGs desde la interfaz.
 4. Para correr las pruebas: `astro dev pytest tests/unit`.
-
-## Limitaciones
-
-- Los eventos nuevos son simulados (IDs `SIM_*`) sobre una base real de 5.807 eventos de 2017-2018.
-- El dataset es una foto de 2017-2018, no refleja el estado actual de Meetup.
-- El archivo de miembros es una muestra, por lo que los totales no cuadran del todo con los declarados por cada grupo.
-
-## Siguientes pasos
-
-- Pasar las transformaciones a dbt, con pruebas y documentación de columnas.
-- Manejar las credenciales con un gestor de secretos.
-- Desplegar con CI/CD y definir una política de retención para las tablas de bitácora.
